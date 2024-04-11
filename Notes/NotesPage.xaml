@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.NotesPage"
+             Title="NotesPage">
+    <VerticalStackLayout Margin="5" Spacing="10">
+        <Editor x:Name="TextEditor"
+                Placeholder="Enter your Note"
+                HeightRequest="100"/>
+
+        <Grid ColumnDefinitions="*, *" ColumnSpacing="4">
+            <Button
+                Text="Save" 
+                Clicked="SaveButton_Clicked"/>
+            <Button
+                Grid.Column="1"
+                Text="Delete" 
+                Clicked="DeleteButton_Clicked"/>
+        </Grid>
+        <Label
+                Text="Hello, P!"
+                x:Name="MessageLabel"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1" 
+                TextColor="White"/>
+    </VerticalStackLayout>
+</ContentPage>
